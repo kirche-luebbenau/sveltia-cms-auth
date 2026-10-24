@@ -1,3 +1,14 @@
 name = "sveltia-cms-auth"
 main = "src/index.js"
 compatibility_date = "2023-03-24"
+
+# Bei jedem Bau aus GitHub ersetzt Cloudflare die im Kundenmenue eingetragenen Variablen durch die
+# aus dieser Datei. Deshalb stehen die nicht geheimen Werte hier. Das Geheimnis GITHUB_CLIENT_SECRET
+# bleibt im Kundenmenue (Settings -> Variables and Secrets, Typ Secret) und wird nicht angetastet.
+keep_vars = true
+
+[vars]
+# Seiten, die sich anmelden duerfen - genau und mit Komma getrennt.
+ALLOWED_DOMAINS = "kirche-luebbenau.pages.dev,www.kirche-luebbenau.de"
+# Oeffentliche Kennung der GitHub-App (sie steht auch in jeder Weiterleitung zu GitHub).
+GITHUB_CLIENT_ID = "Ov23li20jP1L6jx6jhsT"
